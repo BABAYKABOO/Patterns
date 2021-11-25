@@ -1,0 +1,20 @@
+{
+  "name": "vendor_name/patterns",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "",
+  "authors": [
+    {
+      "name": "BABAYKA",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "ext-readline": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "" : "classes/"
+    }
+  }
+}
