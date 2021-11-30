@@ -20,7 +20,8 @@ class Composite extends Component
     }
     public function Operation()
     {
-        print "I am composite. I have " . count($this -> GetChildren()) . " children\n";
+        print "I am composite. +to composite\n";
+        self::$count_composite++;
         foreach($this -> GetChildren() as $Child)
         {
             $Child -> Operation();

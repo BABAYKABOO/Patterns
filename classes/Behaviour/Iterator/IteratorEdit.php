@@ -8,7 +8,7 @@ class IteratorEdit implements \Iterator
 {
     private int $position = 0;
     private array $array;
-    private int $count = 0;
+    private int $count;
     private string $edit;
     private bool $rename;
 
@@ -17,6 +17,7 @@ class IteratorEdit implements \Iterator
         $this->array = $array;
         $this->edit = $edit;
         $this->rename = $rename;
+        $this->count = count($this->array);
     }
     public function current() : string
     {
@@ -41,14 +42,8 @@ class IteratorEdit implements \Iterator
     {
         return $this->position;
     }
-    private function init()
-    {
-        if ($this->count == 0)
-            $this->count = count($this->array);
-    }
     public function valid() : bool
     {
-        $this->init();
         return $this->position < $this->count;
     }
 

@@ -10,15 +10,15 @@ class UsualWay
     {
         echo 'Lorem impsum dolor';
     }
-    public function Forget(Student $student) : bool
+    public function Forget(Student $student, string $NameSubject) : bool
     {
         $lucky = rand(0, 10);
         if ($lucky < 3)
         {
-            $student->studentBook($this->NameSubject,'Pass');
+            $student->studentBook($NameSubject,'Pass');
             return true;
         }
-        $student->studentBook($this->NameSubject,'Don\'t pass');
+        $student->studentBook($NameSubject,'Don\'t pass');
         return false;
     }
 }

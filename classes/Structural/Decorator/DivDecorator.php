@@ -8,6 +8,6 @@ class DivDecorator extends BaseDecorator
 {
     public function Operation() : string
     {
-        return '<div>' . parent::Operation() . '</div>';
+        return "<div>\n\t" . parent::Operation() . "\n</div>";
     }
 }

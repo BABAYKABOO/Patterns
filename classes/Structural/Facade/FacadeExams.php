@@ -15,7 +15,8 @@ class FacadeExams
             $subj = new Subject($subject);
             if ($subj->KnowledgeExam($student))
                 continue;
-            else if ($subj->Forget($student))
+            $usualWay = new UsualWay();
+            if ($usualWay->Forget($student, $subject))
                 continue;
             if ($student->GetMoney() > 500) {
                 $anotherWay = new TrickyWay();

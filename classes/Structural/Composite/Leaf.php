@@ -22,7 +22,8 @@ class Leaf extends Component
     }
     public function Operation()
     {
-        print "I am leaf\n";
+        print "I am leaf +to leaf \n";
+        self::$count_leaf++;
     }
     public function Remove($index) : void
     {

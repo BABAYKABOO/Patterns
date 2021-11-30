@@ -19,7 +19,7 @@ class ProxyDownloader implements IDownloader
     public function downloadPage(string $url): string
     {
         if (!isset($this->cache[$url])) {
-            echo "Usual download.  ";
+            echo "Usual download...  ";
             $this->cache[$url] = $this->downloader->downloadPage($url);
         } else {
             echo "Economical download\n";

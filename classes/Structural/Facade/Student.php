@@ -28,6 +28,7 @@ class Student
     }
     public function resultExams()
     {
+        echo $this->name.": \n";
         foreach ($this->studentBook as $subject)
         {
             echo key($this->studentBook).'  ->  '.$subject."\n";

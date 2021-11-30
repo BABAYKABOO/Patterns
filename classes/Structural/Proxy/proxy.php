@@ -21,12 +21,14 @@ require '..\..\..\vendor\autoload.php';
 echo "Download with YoutubeDownloader:\n";
 $realSubject = new YoutubeDownloader();
 $realSubject->downloadPage("https://youtube.com");
+readline();
 $realSubject->downloadPage("https://youtube.com");
+readline();
 $realSubject->downloadPage("https://youtube.com");
 
 echo "\n";
-
 echo "Download with ProxyDownloader:\n";
+readline();
 $proxy = new ProxyDownloader($realSubject);
 $proxy->downloadPage("https://youtube.com");
 $proxy->downloadPage("https://youtube.com");

@@ -13,3 +13,4 @@ $d->add(new Leaf('John'));
 $d->add(new Leaf('Jump'));
 $s->add($d);
 $s->Operation();
+$s->getCount();
